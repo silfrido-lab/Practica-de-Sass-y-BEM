@@ -1,0 +1,12 @@
+.header {
+    @extend .center;
+    @extend .size-container;
+    @extend .letter-transform;
+    background: var(--green);
+    color: var(--white);
+    font: {
+        family: var(--font-open);
+        size: 18px;
+        weight: bold;
+    }
+}

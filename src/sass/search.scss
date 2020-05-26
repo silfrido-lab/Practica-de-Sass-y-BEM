@@ -1,0 +1,29 @@
+.search {
+    margin-top: -5px;
+    &__title {
+        @extend .center;
+        @extend .size-container;
+        @extend .letter-transform;
+        background-color: var(--green);
+        color: white;
+        font: {
+            family: var(--font-open);
+            size: 18px;
+            weight: bold;
+        }
+    }
+    &__input {
+        background-color: var(--white);
+        display: grid;
+        grid-template-columns: 60px auto;
+        justify-items: center;
+        align-items: center;
+        input {
+            @extend .size-container;
+            border: 0px;
+            outline: none;
+            font-size: 18px;
+            letter-spacing: 5px;
+        }
+    }
+}

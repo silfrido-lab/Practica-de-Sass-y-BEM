@@ -1,0 +1,53 @@
+.animales {
+    @extend .letter-transform !optional;
+    color: var(--white);
+    width: 100%;
+    height: 900px;
+    background: var(--green);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr 1fr 2fr;
+    @media screen and (max-width: 800px) {
+        height: 500px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    &__img--primary {
+        grid-row: 1/4;
+        @media screen and (max-width: 800px) {
+            grid-row: 1/3;
+        }
+    }
+    &__description--primary {
+        columns: 2;
+        grid-row: 1/2;
+        display: inline-flex;
+        align-items: flex-end;
+        margin: 0;
+        margin: 0 1em;
+        @media screen and (max-width: 800px) {
+            grid-column: 2;
+            grid-row: 1/2;
+        }
+    }
+    &__img--secondary {
+        columns: 2;
+        grid-row: 2/5;
+        @media screen and (max-width: 800px) {
+            grid-column: 2;
+            grid-row: 3/5;
+        }
+    }
+    &__description--secondary {
+        grid-row: 4/5;
+        display: inline-flex;
+        align-items: flex-end;
+        margin: 0;
+        margin: 0 1em;
+        @media screen and (max-width: 800px) {
+            grid-row: 3/5;
+        }
+    }
+}

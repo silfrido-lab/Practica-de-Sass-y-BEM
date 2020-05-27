@@ -1,8 +1,10 @@
 @import "./header.scss";
 @import "./main.scss";
 @import "./search.scss";
+@import "./animales.scss";
+@import "./ss.scss";
 body {
-    background: red;
+    // background: red;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,6 +16,7 @@ body {
     --yellow: #D9E540;
     --white: #FFF;
     --font-open: 'Open Sans', sans-serif;
+    --break-small: 800px;
 }
 
 .center {

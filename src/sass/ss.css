@@ -54,6 +54,15 @@
   margin: 0 1em;
 }
 
+.ss__description--primary::after {
+  content: "";
+  background: var(--pink);
+  width: 70px;
+  height: 10px;
+  -webkit-transform: translateX(-135px);
+          transform: translateX(-135px);
+}
+
 @media screen and (max-width: 800px) {
   .ss__description--primary {
     -ms-grid-column: 1;
@@ -90,10 +99,9 @@
 
 .ss__description--secondary::after {
   content: "";
-  background: red;
-  width: 50px;
+  background: var(--pink);
+  width: 70px;
   height: 10px;
-  border: 1px solid blue;
   -webkit-transform: translateX(-135px);
           transform: translateX(-135px);
 }

@@ -135,6 +135,13 @@
   margin: 0;
   margin: 0 1em;
 }
+.ss__description--primary::after {
+  content: "";
+  background: var(--pink);
+  width: 70px;
+  height: 10px;
+  transform: translateX(-135px);
+}
 @media screen and (max-width: 800px) {
   .ss__description--primary {
     grid-column: 1/3;
@@ -158,10 +165,9 @@
 }
 .ss__description--secondary::after {
   content: "";
-  background: red;
-  width: 50px;
+  background: var(--pink);
+  width: 70px;
   height: 10px;
-  border: 1px solid blue;
   transform: translateX(-135px);
 }
 @media screen and (max-width: 800px) {

@@ -64,10 +64,26 @@
 .animales__description--primary {
   columns: 2;
   grid-row: 1/2;
-  display: inline-flex;
-  align-items: flex-end;
   margin: 0;
   margin: 0 1em;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.animales__description--primary p {
+  display: block;
+  position: absolute;
+  width: 150px;
+  line-height: 2;
+  padding: 2em 0;
+}
+.animales__description--primary p::after {
+  content: "";
+  background-color: var(--pink);
+  position: absolute;
+  height: 10px;
+  bottom: 0;
+  width: 70%;
 }
 @media screen and (max-width: 800px) {
   .animales__description--primary {
@@ -87,10 +103,27 @@
 }
 .animales__description--secondary {
   grid-row: 4/5;
-  display: inline-flex;
-  align-items: flex-end;
+  position: relative;
+  display: flex;
+  align-items: center;
   margin: 0;
   margin: 0 1em;
+}
+.animales__description--secondary p {
+  display: block;
+  position: absolute;
+  width: 150px;
+  line-height: 2;
+  padding: 2em 0;
+}
+.animales__description--secondary p::after {
+  content: "";
+  background-color: var(--pink);
+  position: absolute;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  width: 70%;
 }
 @media screen and (max-width: 800px) {
   .animales__description--secondary {
@@ -114,7 +147,6 @@
 }
 .ss img {
   width: 100%;
-  height: 100%;
 }
 .ss__img--primary {
   height: 100%;
@@ -130,17 +162,27 @@
   }
 }
 .ss__description--primary {
-  display: inline-flex;
-  align-items: flex-end;
-  margin: 0;
-  margin: 0 1em;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin: 2em 0;
+  position: relative;
 }
-.ss__description--primary::after {
+.ss__description--primary p {
+  display: block;
+  margin: 0 1em;
+  padding: 2em 0;
+}
+.ss__description--primary p::after {
   content: "";
   background: var(--pink);
-  width: 70px;
   height: 10px;
-  transform: translateX(-135px);
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(15%);
 }
 @media screen and (max-width: 800px) {
   .ss__description--primary {
@@ -158,23 +200,45 @@
   }
 }
 .ss__description--secondary {
-  display: inline-flex;
-  align-items: flex-end;
-  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin: 2em 0;
+  position: relative;
+}
+.ss__description--secondary p {
+  display: block;
+  padding: 2em 0;
   margin: 0 1em;
 }
-.ss__description--secondary::after {
+.ss__description--secondary p::after {
   content: "";
   background: var(--pink);
-  width: 70px;
   height: 10px;
-  transform: translateX(-135px);
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(15%);
 }
 @media screen and (max-width: 800px) {
   .ss__description--secondary {
     grid-template-columns: 2/3;
     grid-row: 2;
   }
+}
+
+.footer {
+  color: var(--green);
+  font-size: 1em;
+  font-weight: bold;
+}
+.footer p {
+  text-align: center;
+}
+.footer p span {
+  color: var(--pink);
 }
 
 body {
@@ -192,18 +256,18 @@ body {
   --break-small: 800px;
 }
 
-.center, .header, .search__title {
+.center, .header, .search__title, .footer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.size-container, .header, .search__title, .search__input input {
+.size-container, .header, .search__title, .search__input input, .footer {
   width: 100%;
   height: 80px;
 }
 
-.letter-transform, .header, .search__title, .animales, .ss {
+.letter-transform, .header, .search__title, .animales, .ss, .footer {
   text-transform: uppercase;
   letter-spacing: 5px;
 }

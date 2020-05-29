@@ -86,14 +86,32 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   margin: 0;
   margin: 0 1em;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.animales__description--primary p {
+  display: block;
+  position: absolute;
+  width: 150px;
+  line-height: 2;
+  padding: 2em 0;
+}
+
+.animales__description--primary p::after {
+  content: "";
+  background-color: var(--pink);
+  position: absolute;
+  height: 10px;
+  bottom: 0;
+  width: 70%;
 }
 
 @media screen and (max-width: 800px) {
@@ -128,14 +146,33 @@
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4/5;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   margin: 0 1em;
+}
+
+.animales__description--secondary p {
+  display: block;
+  position: absolute;
+  width: 150px;
+  line-height: 2;
+  padding: 2em 0;
+}
+
+.animales__description--secondary p::after {
+  content: "";
+  background-color: var(--pink);
+  position: absolute;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  width: 70%;
 }
 
 @media screen and (max-width: 800px) {
@@ -168,7 +205,6 @@
 
 .ss img {
   width: 100%;
-  height: 100%;
 }
 
 .ss__img--primary {
@@ -192,14 +228,37 @@
 }
 
 .ss__description--primary {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2em 0;
+  position: relative;
+}
+
+.ss__description--primary p {
+  display: block;
   margin: 0 1em;
+  padding: 2em 0;
+}
+
+.ss__description--primary p::after {
+  content: "";
+  background: var(--pink);
+  height: 10px;
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
 }
 
 @media screen and (max-width: 800px) {
@@ -226,23 +285,37 @@
 }
 
 .ss__description--secondary {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2em 0;
+  position: relative;
+}
+
+.ss__description--secondary p {
+  display: block;
+  padding: 2em 0;
   margin: 0 1em;
 }
 
-.ss__description--secondary::after {
+.ss__description--secondary p::after {
   content: "";
   background: var(--pink);
-  width: 70px;
   height: 10px;
-  -webkit-transform: translateX(-135px);
-          transform: translateX(-135px);
+  width: 30%;
+  position: absolute;
+  bottom: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
 }
 
 @media screen and (max-width: 800px) {
@@ -252,6 +325,12 @@
     -ms-grid-row: 2;
     grid-row: 2;
   }
+}
+
+.footer {
+  color: var(--green);
+  font-size: 1em;
+  font-weight: bold;
 }
 
 body {
@@ -270,7 +349,7 @@ body {
   --break-small: 800px;
 }
 
-.center, .header, .search__title {
+.center, .header, .search__title, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -282,12 +361,12 @@ body {
           justify-content: center;
 }
 
-.size-container, .header, .search__title, .search__input input {
+.size-container, .header, .search__title, .search__input input, .footer {
   width: 100%;
   height: 80px;
 }
 
-.letter-transform, .header, .search__title, .animales, .ss {
+.letter-transform, .header, .search__title, .animales, .ss, .footer {
   text-transform: uppercase;
   letter-spacing: 5px;
 }

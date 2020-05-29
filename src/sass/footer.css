@@ -1,0 +1,14 @@
+.footer {
+  color: var(--green);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.footer p span {
+  color: var(--pink);
+}
+/*# sourceMappingURL=footer.css.map */

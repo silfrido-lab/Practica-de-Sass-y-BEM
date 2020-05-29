@@ -42,14 +42,32 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   margin: 0;
   margin: 0 1em;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.animales__description--primary p {
+  display: block;
+  position: absolute;
+  width: 150px;
+  line-height: 2;
+  padding: 2em 0;
+}
+
+.animales__description--primary p::after {
+  content: "";
+  background-color: var(--pink);
+  position: absolute;
+  height: 10px;
+  bottom: 0;
+  width: 70%;
 }
 
 @media screen and (max-width: 800px) {
@@ -84,14 +102,33 @@
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4/5;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   margin: 0 1em;
+}
+
+.animales__description--secondary p {
+  display: block;
+  position: absolute;
+  width: 150px;
+  line-height: 2;
+  padding: 2em 0;
+}
+
+.animales__description--secondary p::after {
+  content: "";
+  background-color: var(--pink);
+  position: absolute;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  width: 70%;
 }
 
 @media screen and (max-width: 800px) {

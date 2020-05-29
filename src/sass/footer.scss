@@ -1,0 +1,17 @@
+.footer {
+    @extend .center !optional;
+    @extend .size-container !optional;
+    @extend .size-container !optional;
+    @extend .letter-transform !optional;
+    color: var(--green);
+    font: {
+        size: 1em;
+        weight: bold;
+    }
+    p {
+        text-align: center;
+        span {
+            color: var(--pink);
+        }
+    }
+}
